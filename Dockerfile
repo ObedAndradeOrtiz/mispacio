@@ -22,13 +22,4 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Node + build assets (Vite)
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
- && apt-get install -y nodejs \
- && node -v \
- && npm -v \
- && npm install --no-audit --no-fund \
- && npm run build
-
-
 CMD php -S 0.0.0.0:${PORT:-8080} -t public
