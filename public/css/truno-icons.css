@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'truno';
+  src:  url('../fonts/truno.eot?2bab3c');
+  src:  url('../fonts/truno.eot?2bab3c#iefix') format('embedded-opentype'),
+    url('../fonts/truno.ttf?2bab3c') format('truetype'),
+    url('../fonts/truno.woff?2bab3c') format('woff'),
+    url('../fonts/truno.svg?2bab3c#truno') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.truno {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'truno' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.truno-hours:before {
+  content: "\e900";
+}
+.truno-call-center:before {
+  content: "\e901";
+}
+.truno-cash:before {
+  content: "\e902";
+}
+.truno-chart:before {
+  content: "\e903";
+}
+.truno-chat:before {
+  content: "\e904";
+}
+.truno-contract:before {
+  content: "\e905";
+}
+.truno-delivery-truck:before {
+  content: "\e906";
+}
+.truno-device:before {
+  content: "\e907";
+}
+.truno-information:before {
+  content: "\e908";
+}
+.truno-network:before {
+  content: "\e909";
+}
+.truno-quality:before {
+  content: "\e90a";
+}
+.truno-shop:before {
+  content: "\e90b";
+}
+.truno-stats:before {
+  content: "\e90c";
+}
+.truno-target:before {
+  content: "\e90d";
+}
+.truno-trophy:before {
+  content: "\e90e";
+}
+

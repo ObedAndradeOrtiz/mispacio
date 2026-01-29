@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>📞 Web Ejecutivo - Llamadas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0066cc;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    select,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #004999;
+    }
+
+    #btnColgar {
+      background: #cc0000;
+    }
+
+    #btnColgar:hover {
+      background: #990000;
+    }
+
+    #estado {
+      margin-top: 20px;
+      padding: 10px;
+      background: #e8f4ff;
+      border-left: 5px solid #0066cc;
+      border-radius: 8px;
+    }
+
+    .disabled {
+      background: #ccc !important;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>📞 Plataforma Ejecutiva de Llamadas</h2>
+    <center>
+      <img src="https://spamiora.ddns.net/miora.jpg" alt="Logo" style=" max-width: 600px;">
+    </center>
+    <label>Tu nombre:</label>
+    <select id="nameSelect"></select>
+    <button id="btnConectar" onclick="registrar()">Conectarse</button>
+
+    <label>Destinatario:</label>
+    <select id="destinatarioSelect"></select>
+    <button id="btnLlamar" onclick="llamar()">Llamar</button>
+    <button id="btnColgar" onclick="colgar()" style="display: none;">Colgar</button>
+
+    <div id="estado">🔌 Esperando conexión...</div>
+  </div>
+  <audio id="remoteAudio" autoplay></audio>
+
+  <script>
+    let ws;
+    let name;
+    let localStream;
+    let pc;
+    let conectado = false;
+    let conectadoCon = null;
+
+    const servers = {
+      iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+    };
+
+    async function cargarPersonal() {
+      try {
+        const res = await fetch('https://spamiora.ddns.net/api/personal');
+        const personal = await res.json();
+
+        const nameSelect = document.getElementById("nameSelect");
+        const destinatarioSelect = document.getElementById("destinatarioSelect");
+
+        nameSelect.innerHTML = "<option disabled selected>Selecciona tu nombre</option>";
+        destinatarioSelect.innerHTML = "<option disabled selected>Selecciona destinatario</option>";
+
+        personal.forEach(p => {
+          const option1 = document.createElement("option");
+          option1.value = p.name;
+          option1.textContent = p.name;
+          nameSelect.appendChild(option1);
+
+          const option2 = document.createElement("option");
+          option2.value = p.name;
+          option2.textContent = p.name;
+          destinatarioSelect.appendChild(option2);
+        });
+      } catch (e) {
+        alert("Error al cargar usuarios");
+        console.error(e);
+      }
+    }
+
+    cargarPersonal();
+
+    function actualizarEstado(texto) {
+      document.getElementById("estado").textContent = texto;
+    }
+
+    function mostrarBotonColgar(mostrar) {
+      const botonColgar = document.getElementById("btnColgar");
+      botonColgar.style.display = mostrar ? "block" : "none";
+    }
+    function mostrarBotonLlamar(mostrar) {
+      const botonLlamar = document.getElementById("btnLlamar");
+      botonLlamar.style.display = mostrar ? "block" : "none";
+    }
+
+
+    function registrar() {
+      name = document.getElementById("nameSelect").value;
+      if (!name) return alert("Selecciona tu nombre");
+
+      conectarWebSocket();
+    }
+
+    function conectarWebSocket() {
+      ws = new WebSocket("ws://spamiora.ddns.net:8081");
+
+      ws.onopen = () => {
+        ws.send(JSON.stringify({ type: "register", name }));
+        conectado = true;
+        actualizarEstado("✅ Conectado como ${name}");
+        document.getElementById("btnConectar").classList.add("disabled");
+        document.getElementById("btnConectar").disabled = true;
+      };
+
+      ws.onclose = () => {
+        conectado = false;
+        actualizarEstado("❌ Desconectado. Reconectando...");
+        setTimeout(() => {
+          conectarWebSocket();
+        }, 3000);
+      };
+      pendingCandidates = [];
+      ws.onmessage = async (message) => {
+        const data = JSON.parse(message.data);
+        console.log("📩 Mensaje recibido:", data);
+        switch (data.type) {
+          case "answer":
+            const remoteDesc = new RTCSessionDescription(data.answer);
+            await pc.setRemoteDescription(remoteDesc);
+            conectadoCon = data.from;
+
+            // Procesar candidatos pendientes
+            for (const candidate of pendingCandidates) {
+              try {
+                await pc.addIceCandidate(candidate);
+              } catch (e) {
+                console.error("Error al agregar candidato pendiente", e);
+              }
+            }
+          
+
+            pc.ontrack = function (event) {
+              if (event.track.kind === 'audio') {
+                console.log("🎧 Track recibido:", event.track.kind, event.streams);
+                const audio = document.getElementById("remoteAudio");
+                audio.srcObject = event.streams[0];
+                audio.play();
+              }
+            };
+
+            const select = document.getElementById("destinatarioSelect");
+            const nombreDestinatario = select.options[select.selectedIndex].text;
+            actualizarEstado("🟢 Hablando con: ${nombreDestinatario}");
+            mostrarBotonColgar(true);
+            mostrarBotonLlamar(false);
+            break;
+          case "candidate":
+            if (data.candidate) {
+              try {
+                if (pc && pc.remoteDescription) {
+                  await pc.addIceCandidate(data.candidate);
+                } else {
+                  pendingCandidates.push(data.candidate);
+                }
+              } catch (e) {
+                console.error("Error al agregar candidate", e);
+              }
+            }
+            break;
+        }
+      };
+    }
+
+    async function llamar() {
+      const to = document.getElementById("destinatarioSelect").value;
+      if (!to || !ws || ws.readyState !== WebSocket.OPEN) return alert("Selecciona un destinatario válido");
+
+      pc = new RTCPeerConnection(servers);
+
+      try {
+        localStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        localStream.getTracks().forEach(track => pc.addTrack(track, localStream));
+      } catch (e) {
+        return alert("❌ No se pudo acceder al micrófono: " + e.message);
+      }
+
+      pc.onicecandidate = (event) => {
+        if (event.candidate) {
+          ws.send(JSON.stringify({
+            type: "candidate",
+            to,
+            candidate: event.candidate
+          }));
+        }
+      };
+
+      const offer = await pc.createOffer();
+      await pc.setLocalDescription(offer);
+
+      ws.send(JSON.stringify({
+        type: "call",
+        from: name,
+        to,
+        offer
+      }));
+
+      conectadoCon = to;
+      actualizarEstado("📞 Llamando a ${to}...");
+      mostrarBotonColgar(true);
+    }
+
+    function colgar() {
+      if (pc) {
+        pc.close();
+        pc = null;
+      }
+
+      if (localStream) {
+        localStream.getTracks().forEach(track => track.stop());
+        localStream = null;
+      }
+
+      actualizarEstado("✅ Conectado como ${name}");
+      mostrarBotonColgar(false);
+      mostrarBotonLlamar(true);
+      conectadoCon = null;
+    }
+  </script>
+</body>
+
+</html>

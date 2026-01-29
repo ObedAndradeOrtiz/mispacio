@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Obed Andrade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+        :root {
+            --bg-dark: #070f1f;
+            --bg-card: #0d1c36;
+            --accent: #3fa9f5;
+            --text-light: #d9ecff;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #0b1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            /* 💎 Estilo agregado */
+            border-bottom: 2px solid rgba(63, 169, 245, 0.4);
+            /* azul suave */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+            /* sutil sombra más profunda */
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 12px rgba(63, 169, 245, 0.5);
+        }
+
+        header .title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header .title h1 {
+            font-size: 1.3em;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        header .title p {
+            margin: 2px 0 0;
+            font-size: 0.9em;
+            color: #8cb8e7;
+            letter-spacing: 0.4px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin: 50px auto 80px;
+        }
+
+        .card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            background-color: var(--bg-card);
+            cursor: pointer;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 5px 18px rgba(63, 169, 245, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.7);
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.4);
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay span {
+            background: var(--accent);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9em;
+            box-shadow: 0 0 10px rgba(63, 169, 245, 0.6);
+        }
+
+        .card h3 {
+            margin: 0;
+            text-align: center;
+            padding: 12px;
+            font-size: 1.05em;
+            color: var(--text-light);
+            background-color: #0b1a2e;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #8cb8e7;
+            margin-bottom: 30px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            /* 👉 Cambiado a derecha */
+            background-color: #25d366;
+            color: white;
+            font-size: 1.9em;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1ebe5d;
+            transform: scale(1.12);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden">
+    <header>
+        <div class="logo">
+            <img src="obed.jpg" alt="Obed Andrade" />
+            <div class="title">
+                <h1>Obed Andrade</h1>
+                <p>Desarrollador de Páginas Web Profesionales</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="sitios/animales/index.html" class="card">
+            <img src="imagenes/vet.png" alt="Animales" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-paw"></i> Animales</h3>
+        </a>
+        <a href="sitios/barberia/index.html" class="card">
+            <img src="imagenes/bar.jpg" alt="Barbería y Spa" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-scissors"></i> Barbería & Spa</h3>
+        </a>
+
+        <a href="sitios/blogs/index.html" class="card">
+            <img src="imagenes/blog.jpg" alt="Blogs" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-pen-nib"></i> Blogs</h3>
+        </a>
+
+        <a href="sitios/bodas/index.html" class="card">
+            <img src="imagenes/boda.jpg" alt="Bodas" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-ring"></i> Bodas</h3>
+        </a>
+
+        <a href="sitios/deporte/index.html" class="card">
+            <img src="imagenes/fit.jpg" alt="Deporte" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-dumbbell"></i> Deporte</h3>
+        </a>
+        <a href="sitios/doctores/index.html" class="card">
+            <img src="imagenes/doctor.jpg" alt="Doctores" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-hospital"></i> Doctores</h3>
+        </a>
+
+        <a href="sitios/educacion/index.html" class="card">
+            <img src="imagenes/edu.jpg" alt="Educación" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-graduation-cap"></i> Educación</h3>
+        </a>
+        <a href="sitios/restaurantes/index.html" class="card">
+            <img src="imagenes/rest.png" alt="Restaurantes" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-utensils"></i> Restaurantes</h3>
+        </a>
+        <a href="sitios/tienda/index.html" class="card">
+            <img src="imagenes/tienda.jpg" alt="Tienda Online" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-cart-shopping"></i> Tienda Online</h3>
+        </a>
+
+        <a href="sitios/transporte/index.html" class="card">
+            <img src="imagenes/tra.png" alt="Transporte" />
+            <div class="overlay"><span>Ver proyectos</span></div>
+            <h3><i class="fa-solid fa-truck"></i> Transporte</h3>
+        </a>
+    </main>
+
+    <footer>
+        © 2025 —
+        <a href="https://github.com/ObedAndradeOrtiz/" target="_blank">ObedAndradeOrtiz.github.io</a>
+    </footer>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/59177035251" target="_blank" class="whatsapp-float" title="Chatea conmigo en WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

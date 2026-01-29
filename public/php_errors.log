@@ -1,0 +1,3 @@
+[04-Jun-2023 20:18:10 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(C:\xampp\htdocs\bbc-live\public\index.php) is not within the allowed path(s): (C:\inetpub\wwwroot) in Unknown on line 0
+[04-Jun-2023 20:18:10 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[04-Jun-2023 20:18:10 UTC] PHP Fatal error:  Failed opening required 'C:/xampp/htdocs/bbc-live/public/index.php' (include_path='.;C:\php\pear') in Unknown on line 0

@@ -1,0 +1,1189 @@
+<header id="page-topbar">
+    <div class="navbar-header">
+        <div class="container-fluid">
+            <div class="float-start">
+                <!-- LOGO -->
+                <div class="navbar-brand-box">
+                    <a href="index.html" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="assets/images/logo-sm.png" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/logo-dark.png" alt="" height="19">
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="assets/images/logo-sm.png" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/logo-light.png" alt="" height="19">
+                        </span>
+                    </a>
+                </div>
+
+                <button type="button"
+                    class="btn btn-sm px-3 font-size-24 d-lg-none header-item waves-effect waves-light"
+                    data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+            </div>
+
+            <div class="float-end">
+
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-inline-block">
+                    <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="fa fa-search"></span>
+                    </div>
+                </form>
+
+                <div class="dropdown d-none d-lg-inline-block ms-2">
+                    <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="me-2" src="assets/images/flags/us_flag.jpg" alt="Header Language" height="16">
+                        English <span class="mdi mdi-chevron-down"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <img src="assets/images/flags/germany_flag.jpg" alt="user-image" class="me-1" height="12">
+                            <span class="align-middle"> German </span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <img src="assets/images/flags/italy_flag.jpg" alt="user-image" class="me-1" height="12">
+                            <span class="align-middle"> Italian </span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <img src="assets/images/flags/french_flag.jpg" alt="user-image" class="me-1" height="12">
+                            <span class="align-middle"> French </span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <img src="assets/images/flags/spain_flag.jpg" alt="user-image" class="me-1" height="12">
+                            <span class="align-middle"> Spanish </span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <img src="assets/images/flags/russia_flag.jpg" alt="user-image" class="me-1" height="12">
+                            <span class="align-middle"> Russian </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dropdown d-none d-lg-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                        <i class="mdi mdi-fullscreen font-size-24"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown d-inline-block d-lg-none ms-2">
+                    <button type="button" class="btn header-item noti-icon waves-effect"
+                        id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="mdi mdi-magnify"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                        aria-labelledby="page-header-search-dropdown">
+
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..."
+                                        aria-label="Recipient's username">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit"><i
+                                                class="mdi mdi-magnify"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="dropdown d-inline-block ms-1">
+                    <button type="button" class="btn header-item noti-icon waves-effect"
+                        id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="ti-bell"></i>
+                        <span class="badge bg-danger rounded-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                        aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="m-0"> Notifications (258) </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar style="max-height: 230px;">
+                            <a href="" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="avatar-xs me-3">
+                                        <span class="avatar-title border-success rounded-circle ">
+                                            <i class="mdi mdi-cart-outline"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                        <div class="text-muted">
+                                            <p class="mb-1">If several languages coalesce the grammar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="avatar-xs me-3">
+                                        <span class="avatar-title border-warning rounded-circle ">
+                                            <i class="mdi mdi-message"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">New Message received</h6>
+                                        <div class="text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="avatar-xs me-3">
+                                        <span class="avatar-title border-info rounded-circle ">
+                                            <i class="mdi mdi-glass-cocktail"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">Your item is shipped</h6>
+                                        <div class="text-muted">
+                                            <p class="mb-1">It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="avatar-xs me-3">
+                                        <span class="avatar-title border-primary rounded-circle ">
+                                            <i class="mdi mdi-cart-outline"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                        <div class="text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="avatar-xs me-3">
+                                        <span class="avatar-title border-warning rounded-circle ">
+                                            <i class="mdi mdi-message"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">New Message received</h6>
+                                        <div class="text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-2 border-top">
+                            <a class="btn btn-sm btn-link font-size-14 w-100 text-center" href="javascript:void(0)">
+                                View all
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="assets/images/users/user-4.jpg"
+                            alt="Header Avatar">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="#"><i
+                                class="mdi mdi-account-circle font-size-17 text-muted align-middle me-1"></i>
+                            Profile</a>
+                        <a class="dropdown-item" href="#"><i
+                                class="mdi mdi-wallet font-size-17 text-muted align-middle me-1"></i> My
+                            Wallet</a>
+                        <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i
+                                class="mdi mdi-cog font-size-17 text-muted align-middle me-1"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i
+                                class="mdi mdi-lock-open-outline font-size-17 text-muted align-middle me-1"></i>
+                            Lock screen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#"><i
+                                class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i>
+                            Logout</a>
+                    </div>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                        <i class="mdi mdi-spin mdi-cog"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="top-navigation">
+        <div class="page-title-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="page-title-box">
+                            <h4>Tabs & Accordions</h4>
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Lexa</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">UI Elements</a></li>
+                                <li class="breadcrumb-item active">Tabs & Accordions</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="state-information d-none d-sm-block">
+                            <div class="state-graph">
+                                <div id="header-chart-1"></div>
+                                <div class="info">Balance $ 2,317</div>
+                            </div>
+                            <div class="state-graph">
+                                <div id="header-chart-2"></div>
+                                <div class="info">Item Sold 1230</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="topnav">
+                <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+                    <div class="collapse navbar-collapse" id="topnav-menu-content">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    <i class="ti-dashboard"></i>Dashboard
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-email" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-email"></i>Email
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="topnav-email">
+                                    <a href="email-inbox.html" class="dropdown-item">Inbox</a>
+                                    <a href="email-read.html" class="dropdown-item">Email Read</a>
+                                    <a href="email-compose.html" class="dropdown-item">Email Compose</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-support"></i>UI Elements
+                                </a>
+
+                                <div class="dropdown-menu mega-dropdown-menu px-2 dropdown-mega-menu-xl"
+                                    aria-labelledby="topnav-components">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div>
+                                                <a href="ui-alerts.html" class="dropdown-item">Alerts</a>
+                                                <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
+                                                <a href="ui-badge.html" class="dropdown-item">Badge</a>
+                                                <a href="ui-cards.html" class="dropdown-item">Cards</a>
+                                                <a href="ui-carousel.html" class="dropdown-item">Carousel</a>
+                                                <a href="ui-dropdowns.html" class="dropdown-item">Dropdowns</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>
+                                                <a href="ui-grid.html" class="dropdown-item">Grid</a>
+                                                <a href="ui-images.html" class="dropdown-item">Images</a>
+                                                <a href="ui-lightbox.html" class="dropdown-item">Lightbox</a>
+                                                <a href="ui-modals.html" class="dropdown-item">Modals</a>
+                                                <a href="ui-pagination.html" class="dropdown-item">Pagination</a>
+                                                <a href="ui-popover-tooltips.html" class="dropdown-item">Popover
+                                                    &amp; Tooltips</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>
+                                                <a href="ui-progressbars.html" class="dropdown-item">Progress
+                                                    Bars</a>
+                                                <a href="ui-sweet-alert.html" class="dropdown-item">Sweet-Alert</a>
+                                                <a href="ui-tabs-accordions.html" class="dropdown-item">Tabs
+                                                    &amp; Accordions</a>
+                                                <a href="ui-typography.html" class="dropdown-item">Typography</a>
+                                                <a href="ui-video.html" class="dropdown-item">Video</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-forms" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-receipt"></i>Forms
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="topnav-forms">
+                                    <a href="form-elements.html" class="dropdown-item">Form Elements</a>
+                                    <a href="form-validation.html" class="dropdown-item">Form Validation</a>
+                                    <a href="form-advanced.html" class="dropdown-item">Form Advanced</a>
+                                    <a href="form-editors.html" class="dropdown-item">Form Editors</a>
+                                    <a href="form-uploads.html" class="dropdown-item">Form File Upload</a>
+                                    <a href="form-xeditable.html" class="dropdown-item">Form Xeditable</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-menu-alt"></i>More
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-more">
+                                    <a href="calendar.html" class="dropdown-item">Calendar</a>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-icons"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Icons <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-icons">
+                                            <a href="icons-material.html" class="dropdown-item">Material
+                                                Design</a>
+                                            <a href="icons-ion.html" class="dropdown-item">Ion Icons</a>
+                                            <a href="icons-fontawesome.html" class="dropdown-item">Font
+                                                Awesome</a>
+                                            <a href="icons-themify.html" class="dropdown-item">Themify Icons</a>
+                                            <a href="icons-dripicons.html" class="dropdown-item">Dripicons</a>
+                                            <a href="icons-typicons.html" class="dropdown-item">Typicons
+                                                Icons</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-tables"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Tables <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-tables">
+                                            <a href="tables-basic.html" class="dropdown-item">Basic Tables</a>
+                                            <a href="tables-datatable.html" class="dropdown-item">Data Table</a>
+                                            <a href="tables-responsive.html" class="dropdown-item">Responsive
+                                                Table</a>
+                                            <a href="tables-editable.html" class="dropdown-item">Editable
+                                                Table</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-maps"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Maps <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-maps">
+                                            <a href="maps-google.html" class="dropdown-item"> Google Map</a>
+                                            <a href="maps-vector.html" class="dropdown-item"> Vector Map</a>
+                                        </div>
+                                    </div>
+
+
+                                    <a href="ui-rangeslider.html" class="dropdown-item">Range Slider</a>
+                                    <a href="ui-session-timeout.html" class="dropdown-item">Session Timeout</a>
+
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-charts" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-pie-chart"></i>Charts
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="topnav-charts">
+                                    <a href="charts-morris.html" class="dropdown-item">Morris Chart</a>
+                                    <a href="charts-chartist.html" class="dropdown-item">Chartist Chart</a>
+                                    <a href="charts-chartjs.html" class="dropdown-item">Chartjs Chart</a>
+                                    <a href="charts-flot.html" class="dropdown-item">Flot Chart</a>
+                                    <a href="charts-c3.html" class="dropdown-item">C3 Chart</a>
+                                    <a href="charts-other.html" class="dropdown-item">Jquery Knob Chart</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-support"></i>Pages
+                                </a>
+
+                                <div class="dropdown-menu mega-dropdown-menu px-2 dropdown-mega-menu-lg dropdown-menu-right"
+                                    aria-labelledby="topnav-pages">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div>
+                                                <a href="pages-timeline.html" class="dropdown-item">Timeline</a>
+                                                <a href="pages-invoice.html" class="dropdown-item">Invoice</a>
+                                                <a href="pages-directory.html" class="dropdown-item">Directory</a>
+                                                <a target="_self" href="pages-login.html"
+                                                    class="dropdown-item">Login</a>
+                                                <a target="_self" href="pages-register.html"
+                                                    class="dropdown-item">Register</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div>
+                                                <a target="_self" href="pages-recoverpw.html"
+                                                    class="dropdown-item">Recover
+                                                    Password</a>
+                                                <a target="_self" href="pages-lock-screen.html"
+                                                    class="dropdown-item">Lock
+                                                    Screen</a>
+                                                <a href="pages-blank.html" class="dropdown-item">Blank Page</a>
+                                                <a target="_self" href="pages-404.html" class="dropdown-item">Error
+                                                    404</a>
+                                                <a target="_self" href="pages-500.html" class="dropdown-item">Error
+                                                    500</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-tablet"></i>Layouts
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-layout">
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
+                                            id="topnav-layout-verti" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Vertical <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-layout-verti">
+                                            <a target="_self" href="layouts-light-sidebar.html"
+                                                class="dropdown-item">Light
+                                                Sidebar</a>
+                                            <a target="_self" href="layouts-compact-sidebar.html"
+                                                class="dropdown-item">Compact
+                                                Sidebar</a>
+                                            <a target="_self" href="layouts-icon-sidebar.html"
+                                                class="dropdown-item">Icon
+                                                Sidebar</a>
+                                            <a target="_self" href="layouts-boxed.html" class="dropdown-item">Boxed
+                                                Layout</a>
+                                            <a target="_self" href="layouts-preloader.html"
+                                                class="dropdown-item">Preloader</a>
+                                            <a target="_self" href="layouts-colored-sidebar.html"
+                                                class="dropdown-item">Colored
+                                                Sidebar</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
+                                            id="topnav-layout-hori" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Horizontal <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-layout-hori">
+                                            <a target="_self" href="layouts-horizontal.html"
+                                                class="dropdown-item">Horizontal</a>
+                                            <a target="_self" href="layouts-hori-topbar-dark.html"
+                                                class="dropdown-item">Topbar
+                                                Dark</a>
+                                            <a target="_self" href="layouts-hori-preloader.html"
+                                                class="dropdown-item">Preloader</a>
+                                            <a target="_self" href="layouts-hori-boxed-width.html"
+                                                class="dropdown-item">Boxed
+                                                Layout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Default Tabs</h4>
+                        <p class="card-title-desc">Use the tab JavaScript plugin—include it individually or through the
+                            compiled <code class="highlighter-rouge">bootstrap.js</code> file—to extend our navigational
+                            tabs and pills to create tabbable panes of local content, even via dropdown menus.</p>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#messages" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Messages</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#settings" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                    <span class="d-none d-sm-block">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active p-3" id="home" role="tabpanel">
+                                <p class="mb-0">
+                                    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                    stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg
+                                    carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                                    salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                    voluptate nisi qui.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="profile" role="tabpanel">
+                                <p class="mb-0">
+                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+                                    squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes
+                                    anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                                    letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+                                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                                    Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan
+                                    fanny pack odio cillum wes anderson 8-bit.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="messages" role="tabpanel">
+                                <p class="mb-0">
+                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's
+                                    organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify
+                                    pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy
+                                    hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+                                    pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel
+                                    fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                    them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="settings" role="tabpanel">
+                                <p class="mb-0">
+                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they
+                                    sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                    pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                                    Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
+                                    viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats
+                                    keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                    vegan.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Justify Tabs</h4>
+                        <p class="card-title-desc">Use the tab JavaScript plugin—include it individually or through the
+                            compiled <code class="highlighter-rouge">bootstrap.js</code> file—to extend our navigational
+                            tabs and pills to create tabbable panes of local content, even via dropdown menus.</p>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified" role="tablist">
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#home-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Messages</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                    <span class="d-none d-sm-block">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active p-3" id="home-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                    stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg
+                                    carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                                    salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                    voluptate nisi qui.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="profile-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+                                    squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes
+                                    anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                                    letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+                                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                                    Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan
+                                    fanny pack odio cillum wes anderson 8-bit.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="messages-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's
+                                    organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify
+                                    pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy
+                                    hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+                                    pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel
+                                    fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                    them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="settings-1" role="tabpanel">
+                                <p class="mb-0">
+                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they
+                                    sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                    pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                                    Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
+                                    viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats
+                                    keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                    vegan.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Custom Tabs</h4>
+                        <p class="card-title-desc">Example of custom tabs</p>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#home1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#messages1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Messages</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#settings1" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                    <span class="d-none d-sm-block">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active p-3" id="home1" role="tabpanel">
+                                <p class="mb-0">
+                                    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                    stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg
+                                    carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                                    salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                    voluptate nisi qui.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="profile1" role="tabpanel">
+                                <p class="mb-0">
+                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+                                    squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes
+                                    anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                                    letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+                                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                                    Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan
+                                    fanny pack odio cillum wes anderson 8-bit.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="messages1" role="tabpanel">
+                                <p class="mb-0">
+                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's
+                                    organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify
+                                    pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy
+                                    hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+                                    pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel
+                                    fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                    them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="settings1" role="tabpanel">
+                                <p class="mb-0">
+                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they
+                                    sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                    pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                                    Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
+                                    viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats
+                                    keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                    vegan.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Custom Tabs Justified</h4>
+                        <p class="card-title-desc">Example of custom tabs</p>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#home2" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile2" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#messages2" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Messages</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#settings2" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                    <span class="d-none d-sm-block">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active p-3" id="home2" role="tabpanel">
+                                <p class="mb-0">
+                                    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                    stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg
+                                    carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                                    salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                    voluptate nisi qui.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="profile2" role="tabpanel">
+                                <p class="mb-0">
+                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+                                    squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes
+                                    anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                                    letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+                                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                                    Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan
+                                    fanny pack odio cillum wes anderson 8-bit.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="messages2" role="tabpanel">
+                                <p class="mb-0">
+                                    Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's
+                                    organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify
+                                    pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy
+                                    hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+                                    pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel
+                                    fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                    them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                </p>
+                            </div>
+                            <div class="tab-pane p-3" id="settings2" role="tabpanel">
+                                <p class="mb-0">
+                                    Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they
+                                    sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                    pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                                    Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
+                                    viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats
+                                    keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                    vegan.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end row -->
+
+        <!-- Start row -->
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Default Collapse</h4>
+                        <p class="card-title-desc">
+                            You can use a link with the <code class="highlighter-rouge">href</code> attribute, or a
+                            button with the <code class="highlighter-rouge">data-target</code> attribute. In both cases,
+                            the <code class="highlighter-rouge">data-bs-toggle="collapse"</code> is required.
+                        </p>
+
+                        <div class="d-flex gap-2 flex-wrap mb-3">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Link with href
+                            </a>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Button with data-target
+                            </button>
+                        </div>
+
+
+
+
+                        <div class="collapse show" id="collapseExample">
+                            <div class="card border shadow-none card-body mb-0">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Multiple targets</h4>
+                        <p>A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide multiple elements
+                            by referencing them with a selector in its <code>href</code> or <code>data-bs-target</code>
+                            attribute.
+                            Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide an element
+                            if they each reference it with their <code>href</code> or <code>data-bs-target</code>
+                            attribute</p>
+
+
+                        <div class="d-flex gap-2 flex-wrap mb-3">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1"
+                                role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first
+                                element</a>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Toggle second element</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target=".multi-collapse" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both
+                                elements</button>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                                    <div class="card border shadow-none card-body mb-0">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                    <div class="card border shadow-none card-body mb-0">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <!-- end row -->
+
+
+        <!-- start row -->
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Accordion example</h4>
+                        <p class="card-title-desc">Click the accordions below to expand/collapse the accordion content.
+                        </p>
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Accordion example Flush</h4>
+                        <p>Add <code>.accordion-flush</code> to remove the default <code>background-color</code>, some
+                            borders, and some rounded corners to render accordions edge-to-edge with their parent
+                            container.</p>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="true"
+                                        aria-controls="flush-collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high
+                                        life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                        cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                        labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                        butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore
+                                        sustainable VHS.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high
+                                        life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                        cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                        labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                        butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore
+                                        sustainable VHS.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high
+                                        life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                        cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                        labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                        butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore
+                                        sustainable VHS.</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end row -->
+
+    </div> <!-- container-fluid -->
+</div>
+<!-- End Page-content -->
+
+<script>
+    $('#header-chart-1').sparkline([8, 6, 4, 7, 10, 12, 7, 4, 9, 12, 13, 11, 12], {
+        type: 'bar',
+        height: '32',
+        barWidth: '5',
+        barSpacing: '3',
+        barColor: '#3eb7ba'
+    });
+    $('#header-chart-2').sparkline([8, 6, 4, 7, 10, 12, 7, 4, 9, 12, 13, 11, 12], {
+        type: 'bar',
+        height: '32',
+        barWidth: '5',
+        barSpacing: '3',
+        barColor: '#7a6fbe'
+    });
+</script>

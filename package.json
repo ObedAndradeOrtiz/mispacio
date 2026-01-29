@@ -1,0 +1,33 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@alpinejs/focus": "^3.10.5",
+        "@tailwindcss/forms": "^0.5.2",
+        "@tailwindcss/typography": "^0.5.0",
+        "alpinejs": "^3.0.6",
+        "autoprefixer": "^10.4.7",
+        "axios": "^1.1.2",
+        "laravel-echo": "^1.15.1",
+        "laravel-vite-plugin": "^0.7.2",
+        "postcss": "^8.4.14",
+        "pusher-js": "^8.0.2",
+        "tailwindcss": "^3.1.0",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@fullcalendar/core": "^6.1.11",
+        "@fullcalendar/daygrid": "^6.1.11",
+        "@fullcalendar/interaction": "^6.1.11",
+        "@fullcalendar/list": "^6.1.11",
+        "@fullcalendar/timegrid": "^6.1.11",
+        "exceljs": "^4.4.0",
+        "firebase": "^10.10.0",
+        "pdfjs-dist": "^3.8.162",
+        "sweetalert2": "^11.7.3",
+        "xlsx": "^0.18.5"
+    }
+}
