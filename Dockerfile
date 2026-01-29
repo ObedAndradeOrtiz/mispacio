@@ -22,10 +22,12 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Si usas Vite (Laravel moderno)
+# Node + build assets (Vite)
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
  && apt-get install -y nodejs \
- && npm install \
+ && node -v \
+ && npm -v \
+ && npm install --no-audit --no-fund \
  && npm run build
 
 
