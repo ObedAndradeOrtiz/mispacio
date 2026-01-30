@@ -107,7 +107,7 @@
     <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
     <script src="{{ asset('assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
     <!-- App js -->
-    <script src="{{ asset('assets/js/app.js"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 
 </html>
