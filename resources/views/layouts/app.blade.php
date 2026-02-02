@@ -13,7 +13,8 @@
     <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    @vite(['resources/js/app.js'])
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="js/app.js">
     @livewireStyles
 </head>
 
