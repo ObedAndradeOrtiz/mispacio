@@ -1,5 +1,5 @@
 <div style="height: 25vh;">
-    <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-color:#D2B89F">
+    <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-color:#2f3f60">
         <h3 class="mt-10 mb-6 text-white fw-semibold px-9">Ingresos {{ Auth::user()->sucursal }}
         </h3>
         <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
@@ -31,7 +31,7 @@
                         <li class="">
                             <div class="clearfix">
                                 <div class="float-left"><strong>Bs. {{ $total_monto_g }}</strong></div>
-                                <div class="float-right"><span class="text-muted">Tratamientos</span>
+                                <div class="float-right"><span class="text-muted">Servicios</span>
                                 </div>
                             </div>
                             <hr style="border: 1px solid #ccc; margin: 10px 0; opacity: 0.7;">
@@ -127,7 +127,7 @@
 
                 <div class="mb-3 text-center row">
                     <div class="col-md-4">
-                        <div class="mb-1 fw-semibold text-muted">Tratamientos QR</div>
+                        <div class="mb-1 fw-semibold text-muted">Servicios QR</div>
                         <div class="text-success fw-bold">Bs. {{ $total_monto_cita_qr }}</div>
                     </div>
                     <div class="col-md-4">
@@ -144,7 +144,7 @@
 
                 <div class="mb-3 text-center row">
                     <div class="col-md-4">
-                        <div class="mb-1 fw-semibold text-muted">Tratamientos Efectivo</div>
+                        <div class="mb-1 fw-semibold text-muted">Servicios Efectivo</div>
                         <div class="text-success fw-bold">Bs. {{ $total_monto_cita_efectivo }}</div>
                     </div>
                     <div class="col-md-4">

@@ -73,7 +73,7 @@
                     <li class="nav-item">
                         <a class="nav-link @if ($opcion == 2) active @endif" data-toggle="tab"
                             href="#admin-agendado" wire:click="setOpcion(2)">
-                            <i class="fas fa-spa me-1"></i> Ingresos por Tratamientos
+                            <i class="fas fa-spa me-1"></i> Ingresos por Servicios
                         </a>
                     </li>
                     <li class="nav-item">
@@ -1110,7 +1110,7 @@
                     <div class="mt-2 border-0 shadow-sm card h-100">
                         <div class="text-center card-header">
                             <h3 class="mb-3 card-title fw-bold">
-                                Registro de ingresos por tratamientos
+                                Registro de ingresos por Servicios
                             </h3>
                             <div class="flex-wrap gap-3 d-flex justify-content-center align-items-center">
                                 <div class="gap-2 d-flex align-items-center">

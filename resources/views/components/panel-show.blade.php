@@ -39,7 +39,7 @@
                     bottom: 20px;
                     right: 20px;
                     padding: 10px 16px;
-                    background-color: #D2B89F;
+                    background-color: #1a2340;
                     color: white;
                     border-radius: 30px;
                     display: flex;
@@ -573,11 +573,17 @@
             <style>
                 .header-animated {
                     background: linear-gradient(90deg,
-                            #000000,
-                            #333333,
-                            #3a3a3a,
-                            #333333,
-                            #2b2b2b);
+                            #1a2340,
+                            /* azul noche */
+                            #2f3f60,
+                            /* azul pizarra */
+                            #536a88,
+                            /* azul gris */
+                            #e7d0d9,
+                            /* rosa/lila suave */
+                            #f3e3ea
+                            /* blanco rosado */
+                        );
                     background-size: 300% 100%;
                     animation: headerMove 8s ease-in-out infinite;
                 }
@@ -885,7 +891,7 @@
                                             <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px"
                                                 data-kt-menu="true" id="kt_menu_notifications">
 
-                                                    @livewire('tesoreria.micaja')
+                                                @livewire('tesoreria.micaja')
 
 
 

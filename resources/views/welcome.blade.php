@@ -44,7 +44,7 @@
                                     <form method="POST" action="{{ route('login') }}">
                                         <div class="p-3">
                                             <h4 class="mb-1 text-center text-muted font-size-18">Bienvenido !</h4>
-                                            <p class="text-center text-muted">Inicia sesión en SPA MIORA.</p>
+                                            <p class="text-center text-muted">Inicia sesión en Mi espacio.</p>
                                             <form class="mt-4 form-horizontal" action="index.html">
                                                 <div class="mb-3">
                                                     <label for="username">Email:</label>
@@ -84,7 +84,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="mt-5 text-center">
+                    {{-- <div class="mt-5 text-center">
                         <p>Don't have an account ? <a href="pages-register.html" class="text-primary"> Signup Now </a>
                         </p>
                         ©
@@ -93,7 +93,7 @@
                         </script> Lexa <span class="d-none d-sm-inline-block"> - Crafted with <i
                                 class="mdi mdi-heart text-danger"></i>
                             by Themesdesign.</span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
