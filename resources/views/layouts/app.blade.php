@@ -13,7 +13,7 @@
     <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
     @livewireStyles
 </head>
 
@@ -56,14 +56,14 @@
     <script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
     <script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
     <script src="assets/js/custom/utilities/modals/users-search.js"></script>
-    <script src="{{ asset('js/livewire.js') }}"></script>
+    <script src="js/livewire.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ asset('assets/bundles/lib.vendor.bundle.js') }}"></script>
-    <script src="{{ asset('assets/bundles/counterup.bundle.js') }}"></script>
+    <script src="assets/bundles/lib.vendor.bundle.js"></script>
+    <script src="assets/bundles/counterup.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="{{ asset('assets/bundles/summernote.bundle.js') }}"></script>
-    <script src="{{ asset('assets/js/core.js') }}"></script>
+    <script src="assets/bundles/summernote.bundle.js') }}"></script>
+    <script src="assets/js/core.js"></script>
 </body>
 
 </html>
