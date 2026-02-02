@@ -9,7 +9,6 @@
         ->where('estado', 'Activo')
         ->get();
     ?>
-    <link href="{{ asset('logos/LOGOSINFONDO.png') }}" rel="icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/custom/vis-timeline/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
@@ -20,13 +19,27 @@
     @if (Auth::user()->estado == 'Activo')
         <div id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-disabled">
             <style>
+                :root {
+                    --ms-nude: #D2B89F;
+                    /* tu logo */
+                    --ms-mauve: #B7A69A;
+                    /* femenino sofisticado */
+                    --ms-cream: #FAF7F2;
+                    /* blanco cálido */
+                    --ms-ink: #2B2B2B;
+                    /* oscuro suave */
+                    --ms-text: #4A4744;
+                    /* texto menos duro que #333 */
+                    --ms-line: rgba(0, 0, 0, .08);
+                }
+
                 /* Estilos del botón flotante */
                 #floatingButton {
                     position: fixed;
                     bottom: 20px;
                     right: 20px;
                     padding: 10px 16px;
-                    background-color: #007bff;
+                    background-color: #D2B89F;
                     color: white;
                     border-radius: 30px;
                     display: flex;
@@ -163,7 +176,7 @@
 
                             </div>
                         </div>
-                        @if ($rolesderol->contains('vista', 'Administrador'))
+                        {{-- @if ($rolesderol->contains('vista', 'Administrador'))
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                 data-kt-menu-placement="right-start" class="py-2 menu-item">
 
@@ -205,9 +218,9 @@
                                     </a>
                                 </div>
                             </div>
-                        @endif
-                        <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                            data-kt-menu-placement="right-start" class="py-2 menu-item">
+                        @endif --}}
+                        {{-- <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start"
+                            class="py-2 menu-item">
 
                             <span class="menu-link menu-center">
                                 <span class="menu-icon me-0">
@@ -235,14 +248,8 @@
                                     </span>
                                     <span class="menu-title">CRM</span>
                                 </a>
-                                @if (Auth::user()->rol == 'Jefe Marketing y Publicidad' ||
-                                        Auth::user()->rol == 'Editor' ||
-                                        $rolesderol->contains('vista', 'Administrador') ||
-                                        Auth::user()->rol == 'Asist. Administrativo' ||
-                                        Auth::user()->rol == 'Contador')
-                                    @if (Auth::user()->rol == 'Jefe Marketing y Publicidad' ||
-                                            Auth::user()->rol == 'Editor' ||
-                                            Auth::user()->tesoreria == 'Activo')
+                                @if (Auth::user()->rol == 'Jefe Marketing y Publicidad' || Auth::user()->rol == 'Editor' || $rolesderol->contains('vista', 'Administrador') || Auth::user()->rol == 'Asist. Administrativo' || Auth::user()->rol == 'Contador')
+                                    @if (Auth::user()->rol == 'Jefe Marketing y Publicidad' || Auth::user()->rol == 'Editor' || Auth::user()->tesoreria == 'Activo')
                                         <a class="menu-link d-flex" href="/marketing">
                                             <span class="menu-bullet">
                                                 <span class="bullet bullet-dot"></span>
@@ -257,7 +264,7 @@
 
 
                             </div>
-                        </div>
+                        </div> --}}
                         @if ($rolesderol->contains('vista', 'Administrador'))
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                 data-kt-menu-placement="right-start" class="py-2 menu-item">
@@ -563,26 +570,58 @@
                     }
                 });
             </script>
+            <style>
+                .header-animated {
+                    background: linear-gradient(90deg,
+                            #000000,
+                            #333333,
+                            #3a3a3a,
+                            #333333,
+                            #2b2b2b);
+                    background-size: 300% 100%;
+                    animation: headerMove 8s ease-in-out infinite;
+                }
+
+                @keyframes headerMove {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    50% {
+                        background-position: 100% 50%;
+                    }
+
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+            </style>
             <div class="d-flex flex-column flex-root">
                 <div class="flex-row page d-flex flex-column-fluid">
                     <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
                         <div id="kt_header" style="" class="header align-items-stretch">
-                            <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                            <div
+                                class="header-animated container-fluid d-flex align-items-stretch justify-content-between">
                                 <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                                     <a href="/" class="d-lg-none">
-                                        <img alt="Logo" src="logos/LOGOSINFONDO.png" class="h-25px" />
+                                        <img alt="Logo" src="misf.png" class="h-25px" />
                                     </a>
                                 </div>
                                 <div class="d-flex align-items-center" id="kt_header_wrapper">
                                     <div class="flex-wrap pb-5 page-title d-flex flex-column align-items-start justify-content-center me-lg-20 pb-lg-0"
                                         data-kt-swapper="true" data-kt-swapper-mode="prepend"
                                         data-kt-swapper-parent="{default: '#kt_content_container', lg: '#kt_header_wrapper'}">
-                                        <a href="/dashboard" class="d-flex">
-                                            <img alt="Logo" src="logos/LOGOSINFONDO.png" class="h-25px" />
-                                            <h1 class="my-1 text-dark fw-bold fs-3 lh-1">Sistema SMM</h1>
+
+                                        <a href="/dashboard"
+                                            class="gap-2 d-flex align-items-center text-decoration-none">
+                                            <img alt="Logo" src="misf.png" class="h-50px" />
+                                            <h1 class="mb-0 fw-bold fs-3 lh-1" style="color: #D2B89F;">Mi
+                                                espacio</h1>
                                         </a>
+
                                     </div>
                                 </div>
+
                                 <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
                                     <div class="d-flex align-items-stretch" id="kt_header_nav">
                                         <div class="header-menu align-items-stretch" data-kt-drawer="true"
@@ -845,18 +884,21 @@
 
                                             <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px"
                                                 data-kt-menu="true" id="kt_menu_notifications">
-                                                @livewire('tesoreria.micaja')
+
+                                                    @livewire('tesoreria.micaja')
+
+
 
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center ms-1 ms-lg-3">
+                                        {{-- <div class="d-flex align-items-center ms-1 ms-lg-3">
                                             <div class="btn btn-icon btn-active-light-primary position-relative w-30px h-30px w-md-40px h-md-40px"
                                                 id="kt_drawer_chat_toggle">
                                                 <i class="ki-outline ki-message-text-2 fs-1"></i>
                                                 <span
                                                     class="top-0 bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle start-50 animation-blink"></span>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="d-flex align-items-center ms-1 ms-lg-3"
                                             id="kt_header_user_menu_toggle">
 
@@ -904,11 +946,11 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="my-2 separator"></div>
-                                                <div class="px-5 menu-item">
+                                                {{-- <div class="my-2 separator"></div> --}}
+                                                {{-- <div class="px-5 menu-item">
                                                     <a href="{{ route('profile.show') }}" class="px-5 menu-link">Mi
                                                         perfil</a>
-                                                </div>
+                                                </div> --}}
                                                 <div class="px-5 menu-item">
                                                     <form method="POST" action="{{ route('logout') }}" x-data>
                                                         @csrf

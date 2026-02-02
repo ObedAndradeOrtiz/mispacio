@@ -1,9 +1,6 @@
-<div>
-
-    <div class="d-flex flex-column bgi-no-repeat rounded-top"
-        style="background-image:url('{{ asset('assets/media/misc/auth-bg.png') }}')">
+<div style="height: 25vh;">
+    <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-color:#D2B89F">
         <h3 class="mt-10 mb-6 text-white fw-semibold px-9">Ingresos {{ Auth::user()->sucursal }}
-            {{-- <span class="opacity-75 fs-8 ps-3">24 reports</span> --}}
         </h3>
         <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
             <li class="nav-item">
@@ -14,17 +11,13 @@
                 <a class="pb-4 text-white opacity-75 nav-link opacity-state-100 " data-bs-toggle="tab"
                     href="#kt_topbar_notifications_2">Detalles</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="pb-4 text-white opacity-75 nav-link opacity-state-100" data-bs-toggle="tab"
                     href="#kt_topbar_notifications_3">Imprimir</a>
-            </li>
-            <li class="nav-item">
-                <a class="pb-4 text-white opacity-75 nav-link opacity-state-100" data-bs-toggle="tab"
-                    href="#kt_topbar_notifications_4">Miss BTQ</a>
-            </li>
+            </li> --}}
         </ul>
     </div>
-    <div class="tab-content">
+    <div class="tab-content" style="height: 70vh; overflow-y:scroll;">
         <div class="tab-pane fade show active" id="kt_topbar_notifications_1" role="tabpanel">
             <div class="card">
                 <div class="gap-2 card-body d-flex justify-content-center align-items-center">
@@ -33,8 +26,6 @@
                         Bs. {{ $total_inventario_g + $total_monto_g + $total_inventario_qr }}
                     </div>
                 </div>
-
-
                 <div class="card-footer">
                     <ul class=" list-unstyled">
                         <li class="">
@@ -221,8 +212,6 @@
             </div>
         </div>
         <div class="tab-pane fade" id="kt_topbar_notifications_4" role="tabpanel">
-
-
             <div class="card">
                 <div class="card-body">
                     <ul class=" list-unstyled">

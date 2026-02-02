@@ -4,8 +4,8 @@
     <html lang="es">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SPA MIORA | SISTEMA</title>
-    <link href="{{ asset('logos/LOGOSINFONDO.png') }}" rel="icon">
+    <title>MI ESPACIO</title>
+    <link href="misf.png" rel="icon">
     <meta charset="utf-8" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -56,14 +56,14 @@
     <script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
     <script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
     <script src="assets/js/custom/utilities/modals/users-search.js"></script>
-    <script src="{{ asset('js/livewire.js') }}"></script>
+    <script src="js/livewire.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ asset('assets/bundles/lib.vendor.bundle.js') }}"></script>
-    <script src="{{ asset('assets/bundles/counterup.bundle.js') }}"></script>
+    <script src="assets/bundles/lib.vendor.bundle.js"></script>
+    <script src="assets/bundles/counterup.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="{{ asset('assets/bundles/summernote.bundle.js') }}"></script>
-    <script src="{{ asset('assets/js/core.js') }}"></script>
+    <script src="assets/bundles/summernote.bundle.js"></script>
+    <script src="assets/js/core.js"></script>
 </body>
 
 </html>
