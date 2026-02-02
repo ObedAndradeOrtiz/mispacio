@@ -62,8 +62,10 @@
     <script src="assets/bundles/lib.vendor.bundle.js"></script>
     <script src="assets/bundles/counterup.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="assets/bundles/summernote.bundle.js') }}"></script>
+    <script src="assets/bundles/summernote.bundle.js"></script>
     <script src="assets/js/core.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
 </body>
 
 </html>
