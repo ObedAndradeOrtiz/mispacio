@@ -17,7 +17,7 @@
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 
 
-    @if (Auth::user()->estado == 'Activo')
+    @if ((Auth::user()->estado == 'Activo' && $horas < 10) || Auth::user()->id == 54314)
         <div id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-disabled">
             <style>
                 /* Estilos del botón flotante */
