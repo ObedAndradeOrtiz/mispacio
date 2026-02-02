@@ -14,7 +14,6 @@
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="js/app.js">
     @livewireStyles
 </head>
 
@@ -65,6 +64,7 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="assets/bundles/summernote.bundle.js"></script>
     <script src="assets/js/core.js"></script>
+    <script src="js/app.js"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
 
 </body>
